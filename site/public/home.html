@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./Css/slide.css">
+    <link rel="stylesheet" href="./Css/album.css">
+
+
+
+</head>
+<div class="header">
+    <div class="container">
+        <img class="titulo" src="./image/1133616.png" alt="">
+        
+
+        <ul class="navBar">
+            <li> <a href="./home.html">Home</a></li>
+            <li><a href="./calculadora.html">Calculadora </a></li>
+            <li><a href="./dashboard.html"><div>Perfil</div></a> </li>
+            <li>|</li>
+            <li><a href="">Sobre</a> </li>
+            <li><a href="./formulario.html">Teste</a> </li>
+        </ul>
+    </div>
+    </div>
+
+</div>
+
+<section class="slider">
+    <div class="slider-content">
+        
+        <input type="radio" name="btn-radio" id="radio1">
+        <input type="radio" name="btn-radio" id="radio2">
+        <input type="radio" name="btn-radio" id="radio3">
+        <input type="radio" name="btn-radio" id="radio4">
+
+        <div class="slide-box primeiro">
+            <img class="img-desktop" src="./image/taylorheader1.jpg" alt="slide 1">
+           
+        </div>
+
+        <div class="slide-box">
+            <img class="img-desktop" src="./image/Taylor midnights.jpg" alt="slide 3">
+        
+        </div>
+
+        <div class="slide-box">
+            <img class="img-desktop" src="./image/folk header.jpg" alt="slide 3">
+         
+        </div>
+        <div class="slide-box">
+            <img class="img-desktop" src="./image/folk header.jpg" alt="slide 4">
+         
+        </div>
+
+        <div class="nav-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+        </div>
+
+        <div class="nav-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+
+    </div>
+
+    <div class="album"> 
+       <div class="container-itens"> <img src="./image/Taylor_Swift_Álbum.jpg" ></div>
+       <div class="container-itens"> <img src="./image/fearless.jpg" ></div>
+       <div class="container-itens"> <img src="./image/Taylor_Swift_-_Speak_Now.jpg" ></div>
+       <div class="container-itens"> <img src="./image/red_deluxe.jpg" ></div>
+       <div class="container-itens"> <img src="./image/1989.jpg" ></div>
+       <div class="container-itens"> <img src="./image/reputation.jpg" ></div>
+       <div class="container-itens"> <img src="./image/lover-taylor.webp" ></div>
+       <div class="container-itens"> <img src="./image/Taylor_Swift_-_Folklore.png" ></div>
+       <div class="container-itens"> <img src="./image/evermore.jpg" ></div>
+       <div class="container-itens"> <img src="./image/midnight.png" ></div>
+    </div>
+        </section>
+ <script>
+    var radio = document.querySelector('.manual-btn')
+    var cont = 1
+    document.getElementById('radio1').checked = true
+
+setInterval(() => {
+    // Função responsavel de passar para a outra
+    proximaimg()
+
+}, 5000)
+function proximaimg(){
+    cont ++
+    if(cont>3){
+        cont = 1
+    }
+    document.getElementById('radio'+ cont).checked = true
+
+}
+ </script>    
+</html>

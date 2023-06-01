@@ -1,0 +1,27 @@
+.album{
+    width: 100vw;
+    flex-wrap: wrap;
+    height: 600px;
+    justify-content: space-between;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+
+}
+.container-itens{
+    width: 200px;
+    height:200px ;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 30px;
+
+}
+
+.album img{
+    width: 200px;
+    height: 200px;
+    z-index: 99;
+}

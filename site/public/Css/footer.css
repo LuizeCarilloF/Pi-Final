@@ -1,0 +1,26 @@
+.contato {
+    display: flex;
+
+}
+.footer {
+    height: var(--tamanho-footer);
+    width: 100%;
+    background-color: #32b9cd;
+    color: #fff;
+  }
+  
+  .footer h4 {
+    margin: 0;
+  }
+  
+  .footer .container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .footer .container .version {
+    font-size: 12px;
+    font-weight: 800;
+  }

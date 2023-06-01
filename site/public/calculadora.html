@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Artistas Mundial</title>
+  <link rel="stylesheet" href="Css/estilo.css">
+  <link rel="stylesheet" href="Css/calculadora.css">
+  
+
+</head>
+
+<body>
+
+  <div class="header">
+    <div class="container">
+        <img class="titulo" src="./image/1133616.png" alt="">
+        
+
+        <ul class="navBar">
+            <li> <a href="./home.html">Home</a></li>
+            <li><a href="./calculadora.html">Calculadora </a></li>
+            <li><a href="./dashboard.html"><div>Perfil</div></a> </li>
+            <li>|</li>
+            <li><a href="">Sobre</a> </li>
+            <li><a href="./formulario.html">Teste</a> </li>
+        </ul>
+    </div>
+    </div>
+
+  </div>
+
+  <div class="calculadora">
+    <h1>Calculadora de Artistas</h1>
+    <p>Responda as perguntas abaixo para calcular a pontuação do artista.</p>
+    <form>
+
+      Qual é o número de álbuns de estudio lançados pelo artista? <input type="number" id="input_album" name="album"
+        placeholder="Qual é o número de álbuns lançados pelo artista?"><br>
+      Qual é o número total de músicas lançadas pelo artista? <input type="number" id="input_musica" name="musica"
+        placeholder="Qual é o número de músicas lançadas pelo artista?"><br>
+      Qual é a duração média das músicas do artista? <input type="number" id="input_duracao" name="duracao"s
+        placeholder="Qual é a duração média das músicas do artista?"><br>
+      Quantos prêmios do American grammy o artista já recebeu? <input type="number" id="input_premios" name="premios"
+      placeholder=" Quantos prêmios do American grammy o artista já recebeu?"><br>
+
+        <audio controls src="https://dl03.yt2mp3.work/320/oVVUP8IW--S::d923778f060123c38aabafaff2f05656::1684207738::no::rb"></audio>
+    </form>
+    
+    <button onclick="calcularPontuacao()">Calcular</button>
+    <div id="div_mensagem"></div>
+  </div>
+
+  <script>
+    function calcularPontuacao() {
+
+
+
+
+
+      var album = input_album.value  // 11
+      var musica = input_musica.value / album // 220 = 20
+      var duracao = input_duracao.value // 3  60
+      var premios = input_premios.value  //11 = 22
+      // var mediamusica = input_musica.value / album 
+
+
+
+      var respostas = [album, musica, duracao, premios];
+
+      var pontuacoes = [1, 1, musica, 2];
+
+      var pontuacao = 0;
+      for (var i = 0; i < respostas.length; i++) {
+        if (respostas[i]) {
+          pontuacao += pontuacoes[i] * respostas[i];
+        }
+
+      }
+
+      // var porcentagem = Math.round(pontuacao  * 100 / pontuacao);
+      // var X = 25; // número de comparação
+      // if (pontuacao ==10) {
+      //   alert("A pontuação do artista 10 igual a da Taylor" );
+      // } else {
+      //   alert("A pontuação do artista é menor que 10,Taylor ainda é melhor");
+      // 
+
+      if (album == '' || musica == '' || duracao == '' || premios == '') {
+        alert('Há campos nulos')
+      }
+      else if (pontuacao > 100) {
+        pontuacao = 10
+        classificacao = 3
+
+      }
+      else if (pontuacao >= 60) {
+        pontuacao = 6
+        classificacao = 2
+      }
+      else {
+        pontuacao = 3
+        classificacao = 1
+      }
+      //  if(pontuacao>=50){
+      //   pontuacao = 4
+      //   classificacao = 2
+      // }
+      // if(pontuacao<=40){
+      //   pontuacao = 2
+      //   classificacao = 1
+      // // }
+      alert("O artista recebeu " + pontuacao + " pontos(Sendo o Maximo de pontos 10 e o minimo 3), Sua classificação é " + classificacao + " estrela ")
+
+
+
+
+    }
+  </script>
+</body>
+
+</html>

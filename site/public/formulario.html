@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+   
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <img class="titulo" src="./image/1133616.png" alt="">
+            
+    
+            <ul class="navBar">
+                <li> <a href="./home.html">Home</a></li>
+                <li><a href="./calculadora.html">Calculadora </a></li>
+                <li><a href="./dashboard.html"><div>Perfil</div></a> </li>
+                <li>|</li>
+                <li><a href="">Sobre</a> </li>
+                <li><a href="./formulario.html">Teste</a> </li>
+            </ul>
+        </div>
+        </div>
+
+       
+ 
+        <!-- <select name="" id="">
+        <option value=""></option>
+    </select> -->
+    
+    <div class="perguntas">
+        <div class="testeH1"> <h1>Teste se você conhece sobre Taylor swift:
+    </h1></div>
+
+     Qual o nome completo da cantora Taylor Swift?
+    <select  id="input_pergunta1">
+        <option value="nulo"></option>
+        <option value="p1_A">Taylor Adison Swift</option>
+        <option value="p1_B">Taylor Alison Swift</option> <!--essa-->
+        <option value="p1_C">Taylor Corner Swift</option>
+    </select> 
+    Qual foi o primeiro álbum de Taylor Swift que ela escreveu inteiramente por conta própria?
+    <select  id="input_pergunta2">
+        <option value="nulo"></option>
+        <option value="p2_A">Speak Now</option><!--essa-->
+        <option value="p2_B">Red</option>
+        <option value="p2_C">Taylor Swift</option>
+    </select> 
+    Em que cidade Taylor Swift nasceu?
+    <select  id="input_pergunta3">
+        <option value="nulo"></option>
+        <option value="p3_A">Reading,Pensilvânia</option> <!--essa-->
+        <option value="p3_B">Nova Iorque</option>
+        <option value="p3_C">Iowa</option>
+    </select>
+    Qual é o primeiro álbum de estúdio de Taylor Swift?
+    <select  id="input_pergunta4">
+        <option value="nulo"></option>
+        <option value="p4_A">Speak Now</option>
+        <option value="p4_B">Taylor Swift</option><!--essa-->
+        <option value="p4_C">1989</option>
+    </select>
+    Taylor Swift já ganhou quantos prêmios Grammy?
+    <select  id="input_pergunta5">
+        <option value="nulo"></option>
+        <option value="p5_A">10</option>
+        <option value="p5_B">13</option>
+        <option value="p5_C">11</option><!--essa-->
+    </select>
+    Qual é o nome do primeiro namorado famoso de Taylor Swift?
+    <select  id="input_pergunta6">
+        <option value="nulo"></option>
+        <option value="p6_A">Harry Styles</option>
+        <option value="p6_B">Joe Jonas</option><!--essa-->
+        <option value="p6_C">Calvin Harris</option>
+    </select>
+    Qual foi o primeiro instrumento musical que Taylor Swift aprendeu a tocar?
+    <select  id="input_pergunta7">
+        <option value="nulo"></option>
+        <option value="p7_A">Violão</option> <!--essa-->
+        <option value="p7_B">Piano</option>
+        <option value="p7_C">Guitarra</option>
+    </select>
+    Taylor Swift estudou na escola ou era educada em casa?
+    <select  id="input_pergunta8">
+        <option value="nulo"></option>
+        <option value="p8_A">Em casa</option><!--essa-->
+        <option value="p8_B">Escola</option>
+        
+    </select>
+    Taylor Swift tem algum irmão ou irmã?
+    <select  id="input_pergunta9">
+        <option value="nulo"></option>
+        <option value="p9_A">Sim</option><!--essa-->
+        <option value="p9_B">Não</option>
+ 
+    </select>
+    Em qual filme de 2014 Taylor Swift emprestou sua voz para um personagem animado?
+    <select  id="input_pergunta10">
+        <option value="nulo"></option>
+        <option value="p10_A">Smurfs</option>
+        <option value="p10_B">O Lorax</option><!--essa-->
+        <option value="p10_C">Barbie</option>
+    </select>
+    <div>
+    <button onclick="pontos()">Ver Acertos</button>
+    <input type="button" value="Tentar novamente" on,Click="window.location.reload()">
+    <div id="div_mensagem"></div>
+</div>
+    </div>
+
+</body>
+<script>
+const bnt = document.querySelector('#refresh')
+var acertos=0
+
+
+function pontos(){
+
+var p1 = input_pergunta1.value
+
+var p2 = input_pergunta2.value
+
+var p3 = input_pergunta3.value
+
+var p4 = input_pergunta4.value
+
+var p5 = input_pergunta5.value
+
+var p6 = input_pergunta6.value
+
+var p7 = input_pergunta7.value
+
+var p8 = input_pergunta8.value
+
+var p9 = input_pergunta9.value
+
+var p10 = input_pergunta10.value
+
+ 
+
+if(p1 == 'nulo'|| p2 == 'nulo'||p3 == 'nulo'||p4 == 'nulo'||p5 == 'nulo'||p6 == 'nulo'||p7 == 'nulo'||p8 == 'nulo'||p9 == 'nulo'||p10 == 'nulo')
+ alert('Há campos nulos, por favor verifique e escolha uma alternativa')
+
+else{
+if(p1 == "p1_B"){
+    
+    acertos+=1;
+}
+else{
+    div_mensagem.innerHTML +=`Pergunta 1 - Sua Resposta esta incorreta, a resposta correta é a Taylor Alison Swift<br> `
+}
+if(p2 == "p2_A"){
+    
+    acertos+=1;
+    
+}
+
+
+else{
+    div_mensagem.innerHTML +=`Pergunta 2 - Sua Resposta esta incorreta, a resposta correta é Speak Now<br> `
+}
+if(p3 == "p3_A"){
+    
+    acertos+=1;
+}
+else{
+    div_mensagem.innerHTML +=`Pergunta 3 - Sua Resposta esta incorreta, a resposta correta é  Reading,Pensilvânia<br> `
+}
+if(p4 == "p4_B"){
+    
+    acertos+=1;
+}
+else{
+    div_mensagem.innerHTML +=`Pergunta 4 - Sua Resposta esta incorreta, a resposta correta é Taylor Swift<br> `
+}
+if(p5 == "p5_C"){
+    
+    acertos+=1;
+}
+else{
+    div_mensagem.innerHTML +=`Pergunta 5 - Sua Resposta esta incorreta, a resposta correta é 11<br> `
+}
+if(p6 == "p6_B"){
+    
+    acertos+=1;
+}
+else{
+    div_mensagem.innerHTML +=`Pergunta 6 - Sua Resposta esta incorreta, a resposta correta é  Joe Jonas<br> `
+}
+if(p7 == "p7_A"){
+    
+    acertos+=1;
+}
+else{
+    div_mensagem.innerHTML +=`Pergunta 7 - Sua Resposta esta incorreta, a resposta correta é  Violão<br> `
+}
+if(p8 == "p8_A"){
+    
+    acertos+=1;
+}
+else{
+    div_mensagem.innerHTML +=`Pergunta 8 - Sua Resposta esta incorreta, a resposta correta é  Em casa <br>`
+}
+if(p9 == "p9_A"){
+    
+    acertos+=1;
+}
+else{
+    div_mensagem.innerHTML +=`Pergunta 9 - Sua Resposta esta incorreta, a resposta correta é Sim <br>`
+}
+if(p10 == "p10_B"){
+    
+    acertos+=1;
+}
+else{
+    div_mensagem.innerHTML +=`Pergunta 10 - Sua Resposta esta incorreta, a resposta correta é O Lorax <br>`
+}
+}
+
+
+
+div_mensagem.innerHTML += ` Voce acertou ${acertos} questoes!`
+
+
+
+
+
+   
+
+        // aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        // var pontuacao = acertos
+        // var nomeVar = nome_input.value;
+        // var emailVar = email_input.value;
+        // var senhaVar = senha_input.value;
+        
+
+        // if (nomeVar == "" || emailVar == "" || senhaVar == "" ) {
+            
+        //     mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+        //     // aguardar();
+        //     return false;
+        // }
+        // else {
+        //     setInterval(sumirMensagem, 5000)
+        // }
+
+        // Enviando o valor da nova inputz
+        fetch("/usuarios/pontos", {
+        //   mode: 'no-cors',
+        method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                pontuacaoServer: acertos,
+                fkusuarioServer: sessionStorage.getItem("ID_USUARIO"),
+                // dadosServer: sessionStorage.setItem('int columnIndex')
+                
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta:", resposta);
+
+            if (resposta.ok) {
+                
+
+                mensagem_erro.innerHTML = "Pontuação contabilizada.";
+
+                // setTimeout(() => {
+                //     window.location = "index.html";
+                // }, "2000")
+
+                // limparFormulario();
+                // finalizar// aguardar();
+            } else {
+                throw ("Houve um erro ao Contabilizar a sua pontuação no banco!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // aguardar();
+        });
+
+        return false;
+    
+}
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+
+
+
+
+
+</script>
