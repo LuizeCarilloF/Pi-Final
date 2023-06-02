@@ -56,17 +56,17 @@
 
         </div>
 
-
-
-        <div class="chart1">
-            <canvas id="myChart1"></canvas>
-        </div>
-
-        
         <div class="card">
             <p class="Frasepontos" id="pontuacao"></p>
 
         </div>
+
+        <div class="chart1" >
+            <canvas id="myChart1"></canvas>
+        </div>
+
+        
+     
     </div>
 
 
@@ -174,13 +174,13 @@ console.log(vetorPontos)
 // let labels = ["tentativa 1", "tentativa 2", "tentativa 3","tentativa 4","tentativa 5","tentativa 6", "tentativa 7"];
 let labels = [vetordtHora];
 // Criando estrutura para plotar gráfico - dados
-let data = resposta[resposta]
+let data = [vetorPontos]
 let dados = {
     labels: vetordtHora,
     datasets: [{
         label: `pontos`,
         // data: [data.pontos],
-        data: [vetorPontos[2]],
+        data: vetorPontos,
         fill: false,
         backgroundColor: 'rgb(255, 255, 128)',
         borderColor: 'rgb(255, 255, 128)',
