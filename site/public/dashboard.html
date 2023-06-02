@@ -99,9 +99,11 @@
 
             
                     resposta.json().then(function (resposta) {
-                        console.log("Dados recebidos: ", JSON.stringify(resposta[2]["pontuacao"]));
-                        pontuacao.innerHTML = 'você tem ' + resposta[2] ["pontuacao"] +  ' pontos'
+                        console.log("Dados recebidos: ", JSON.stringify(resposta[0]["pontuacao"]));
+                        pontuacao.innerHTML = 'você tem ' + resposta[0] ["sum(pontuacao)"] +  ' pontos'
                     });
+                    
+                    
                 } else {
                     throw ('Houve um erro na API!');
                 }
