@@ -43,9 +43,9 @@ body {
 .dash-right .avisos .div-form textarea {
   width: 100%;
   /* color: #E6005A; */
-  border: 3px solid #e6005a;
+  border: 3px solid #a51c1c;
   background-color: white;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .dash-right .avisos .div-form button {
@@ -57,7 +57,7 @@ body {
   font-size: 18px;
   padding: 10px 15px;
   color: white;
-  background-color: #e6005a;
+  background-color: #ff1717;
   width: 120px;
 }
 
@@ -70,7 +70,7 @@ body {
   font-size: 14px;
   padding: 5px 8px;
   color: white;
-  background-color: #e6005a;
+  background-color: #e61b00;
   width: 80px;
 }
 
@@ -111,7 +111,7 @@ body {
 /* pagina graficos */
 
 .dash-header {
-  background-color: #212124;
+  background-color: #fa1818;
 }
 
 .dash {

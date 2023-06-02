@@ -257,7 +257,7 @@ input {
   justify-content: space-evenly;
   align-items: center;
   border-right: 3px solid #32b9cd;
-  background-color: #212124;
+  background-color: #f45151;
   /* border: 3px solid pink; */
 }
 
@@ -265,7 +265,7 @@ input {
   display: flex;
   width: 80%;
   height: fit-content;
-  background-color: #161618;
+  /* background-color: #161618; */
   position: relative;
   top: 0;
   left: 25%;
